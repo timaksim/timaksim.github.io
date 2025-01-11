@@ -674,7 +674,7 @@ padding-top: 40px;
     content: "";
     position: absolute;
     top: -33px;
-    left: 630px;
+    left: 600px;
     width: 64px;
     height: 62px;
     background-image: url(../img/sparkle.svg);
@@ -1021,6 +1021,7 @@ padding-top: 40px;
     max-width: 530px;
     text-align: center;
     margin: auto;
+    height: 1000px;
 }
 
 
@@ -1047,15 +1048,15 @@ padding-top: 40px;
 
 .cta::after {
     background-image: url(../img/cta2.png);
-    height: 736px;
-    width: 380px;
+    height: 1136px;
+    width: 580px;
 
 }
 
 .cta::after {
         transform: scale(0.7);
-        bottom: -110px;
-        right: -57px;
+        bottom: -170px;
+        right: -87px;
     }
 
 .cta__badge{
@@ -1272,6 +1273,13 @@ text-decoration: none;
     padding: 5px 11px;
     border: 1px solid currentColor;
     border-radius: 4px;
+    transition: 0.3s;
+}
+
+.tag:hover{
+	transition: 0.3s;
+	background: black;
+	color: white;
 }
 
 .article-card__date {
@@ -2220,9 +2228,10 @@ dt {
     font-size: clamp(12px, 1.1111111111vw, 16px);
     font-weight: 500;
     line-height: 1.6;
-    color: var(--color-dark);
+    color: black;
     width: 100%;
     border: none;
+    outline: none;
 }
 
 .blog-top__search-button {
