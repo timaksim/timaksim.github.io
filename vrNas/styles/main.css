@@ -1,3 +1,7 @@
+a{
+	text-decoration: none
+}
+
 .drop-box{
 background: linear-gradient(to right,  #B0B0B2,#18181B);
 border-radius: 0;
@@ -261,4 +265,115 @@ letter-spacing: -0.5%;
 }
 
 
+#sync1 {
+  .item {
+    background: #0c83e7;
+    padding: 80px 0px;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+  }
+}
 
+#sync2 {
+  .item {
+    background: #C9C9C9;
+    padding: 10px 0px;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    h1 {
+      font-size: 18px;
+    }
+  }
+  .current .item{
+    background: #0c83e7;
+  }
+}
+
+
+
+.owl-theme {
+  .owl-nav {
+    /*default owl-theme theme reset .disabled:hover links */
+    [class*='owl-'] {
+      transition: all .3s ease;
+      &.disabled:hover {
+       background-color: #D6D6D6;
+      }   
+    }
+    
+  }
+}
+
+/*arrows on first carousel*/
+#sync1.owl-theme {
+  position: relative;
+  .owl-next, .owl-prev {
+    width: 22px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+  }
+  .owl-prev {
+    left: 10px;
+  }
+  .owl-next {
+    right: 10px;
+  }
+}
+
+.bg-lighter{
+	background: url(../img/lighter.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.bg-team{
+	height: 370px;
+	background: linear-gradient(to bottom, transparent, #192883);
+}
+
+.team-border{
+	border: 1px solid transparent;
+	border-image: linear-gradient(to right, white,#18181B);
+	border-image-slice: 1;
+}
+
+.team-border:hover{
+	border: 1px solid transparent;
+	border-image: linear-gradient(to right, #0CBAF1,#E95CE9);
+	border-image-slice: 1;
+}
+
+.bg-black50-5{
+	background: rgba(37, 37, 50, 0.5);
+}
+
+.galka {
+	list-style-image: url(../img/check.png);
+	line-height: 28px;
+}
+
+#r4 .bg-black50-5{
+	width: 430px;
+	margin: auto;
+}
+
+.w-85{
+	width: 85%;
+}
+
+.glk{
+	list-style-image: url(../img/icon/glk.png);
+}

@@ -45,6 +45,13 @@
 	#r5 img{
 		margin-left: 20px;
 	}
+
+	#r4 .bg-black50-5{
+		width: 230px;
+	}
+
+	.krugli{min-height: 1900px}
+	
 }
 
 /*sm*/
