@@ -377,3 +377,36 @@ letter-spacing: -0.5%;
 .glk{
 	list-style-image: url(../img/icon/glk.png);
 }
+
+.btn-gradient-cont1 {
+	border: 1px solid transparent;
+	border-image: linear-gradient(to right, #0CBAF1, #E95CE9);
+	border-image-slice: 1;
+	padding: 12px 24px;
+	line-height: 1;
+	background: transparent;
+}
+.tema {
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+/*	border-radius: 50%;*/
+	background: grey;
+	padding: 2px 10px;
+
+}
+
+.scrollers{
+	overflow: scroll; overflow-x: hidden; max-height: 500px;
+}
+
+.scrollers::-webkit-scrollbar{
+	background:rgba(255, 255, 255, 0.12) ;
+	width: 2px;
+}
+
+.scrollers::-webkit-scrollbar-thumb{
+	background:rgba(255, 255, 255, 1) ;
+	width: 2px;
+}
