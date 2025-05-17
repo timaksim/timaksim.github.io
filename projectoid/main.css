@@ -1,0 +1,122 @@
+body{ 
+padding:0;
+margin:0;
+background: #fbf3e7;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.header{
+	display: flex;
+	padding: 10px;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+}
+
+
+.nav-link{
+	text-decoration: none;
+	color: white;
+	background: black;
+	padding: 10px 20px;
+	margin: 0 20px;
+	border-radius: 8px;
+}
+
+.zagzag{
+	text-align: center;
+	margin: 0;
+	font-size: 40px;
+	padding-top: 100px;
+}
+
+.container{
+	width: 66%;
+	margin: auto;
+	padding: 10px;
+	background: gray;
+}
+
+.i{
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+
+.i2{
+	display: block;
+	margin: auto;
+	width: 90%;
+}
+
+.container2{
+	width: 66%;
+	margin: auto;
+	padding: 10px;
+	background: #fdffc5;
+}
+
+
+.container3{
+	width: 66%;
+	margin: auto;
+	padding: 10px;
+	background: #5788b1;
+}
+
+
+.container4{
+	width: 66%;
+	margin: auto;
+	padding: 10px;
+	background: #94985e;
+}
+
+.fw{
+	font-weight: bold;
+	text-align: center;
+}
+
+.btn-glow{
+	background: linear-gradient(to right, #0048ff, #00baff);
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	border-radius: 0;
+	border: none;
+	transition: 1s;
+	margin: 0 20px;
+	padding: 10px 20px;
+	border-radius: 6px;
+}
+
+.btn-glow:hover{
+	transition: 1s;
+	box-shadow: 00px 0px 30px 30px #0584b3;
+	color: white;
+}
+
+
+.btn-glow2{
+	background: linear-gradient(to right, #b51d25, #ff000d);
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	border-radius: 0;
+	border: none;
+	transition: 1s;
+	margin: 0 20px;
+	padding: 10px 20px;
+	border-radius: 6px;
+}
+
+.btn-glow2:hover{
+	transition: 1s;
+	box-shadow: 00px 0px 30px 30px #d6111c;
+	color: white;
+}

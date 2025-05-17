@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caesar</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+  <!-- shapka -->
+  	<div class="header">
+  		<div type="button" class="btn-glow" href="index.html">
+  			<a href="index.html">Fliter</a>
+  		</div>
+  		<div type="button" class="btn-glow2" href="list2.html">
+  			<a href="list2.html">Caesar</a>
+  		</div>
+  	</div>
+  <!-- shapka -->
+
+  <h1 class="zagzag">
+  	Шифр Цезаря
+  </h1>
+  <div class="container" style="background:transparent;">
+  <p class="fw">Предположительно, Цезарь (да, тот самый Цезарь) «шифровал» (т. е. скрывал обратимым образом) конфиденциальные сообщения, сдвигая каждую букву в них на некоторое количество позиций. Например, он мог написать A как B, B как C, C как D, …, и, оборачиваясь по алфавиту, Z как A. И поэтому, чтобы сказать кому-то ПРИВЕТ, Цезарь мог написать IFMMP вместо этого. Получив такие сообщения от Цезаря, получатели должны были «расшифровать» их, сдвигая буквы в противоположном направлении на то же количество позиций.
+	</p>
+	</div>
+
+	<!-- theme1 -->
+	  <div class="container4">
+	  	<h2 class="zag">Шифровка</h2>
+	  	<p class="text">Секретность этой «криптосистемы» основывалась на том, что только Цезарь и получатели знали секрет, количество позиций, на которые Цезарь сдвинул свои буквы (например, 1). Не особенно безопасно по современным стандартам, но, эй, если вы, возможно, первый в мире, кто это сделал, довольно безопасно!
+	  		<br><br>
+			Незашифрованный текст обычно называется <i>открытым текстом</i>. Зашифрованный текст обычно называется <i>шифротекстом</i>. А используемый секрет называется <i>ключом</i>.
+				<br><br>
+			Чтобы было понятнее, вот как происходит шифрование HELLO с помощью ключа 1 
+			итог IFMMP:</p>
+			<img src="img/table.png" alt="" class="i" style="width:90%">	
+	  </div>
+	<!-- theme1 -->
+
+	<!-- theme2 -->
+		<div class="container2">
+			<h2 class="zag">Круг Цезаря</h2>
+			<p class="text">
+				Более формально, алгоритм Цезаря (т.е. шифр) шифрует сообщения, «вращая» каждую букву на <i><b>K</b></i>
+				позиции. Более формально, если <i><b>P</b></i>
+				представляет собой некоторый открытый текст (т.е. незашифрованное сообщение),<i><b>Pi</b></i>
+				это <i><b>i</b></i>
+				персонаж в <i><b>P</b></i>
+				, и <i><b>K</b></i>
+				является секретным ключом (т.е. неотрицательным целым числом), то каждая буква, <i><b>Ci</b></i>
+				, в зашифрованном тексте, <i><b>C</b></i>
+				, вычисляется как
+			</p>	
+			<p class="fw" style="font-size: 20px;"><i>Ci = (Pi + K) % 26</i></p>
+			<p class="text">
+				где <i><b>% 26</b></i>
+				здесь означает «остаток от деления на 26». Эта формула, возможно, заставляет шифр казаться более сложным, чем он есть на самом деле, но на самом деле это просто краткий способ точного выражения алгоритма. Действительно, ради обсуждения, представьте A (или a) как <i><b>0</b></i>
+				, B (или b) как <i><b>1</b></i>
+				, …, H (или h) как <i><b>7</b></i>
+				, i (или I) как <i><b>8</b></i>
+				, …, и Z (или z) как <i><b>25</b></i>
+				Предположим, что Цезарь просто хочет сказать Hi кому-то конфиденциально, используя, на этот раз, ключ, <i><b>K</b></i>
+				, из 3. И поэтому его открытый текст, <i><b>P</b></i>
+				, это Hi, в этом случае первый символ его открытого текста, <i><b>P0</b></i>
+				, есть H(он же 7), а второй символ его открытого текста, <i><b>P1</b></i>
+				, есть i(он же 8). Первый символ его шифртекста, <i><b>C0</b></i>
+				, таким образом K, и второй символ его шифртекста, <i><b>C1</b></i>
+				, таким образом L. Понимаете смысл?
+			</p>
+			<img src="img/cipher.png" alt="" class="i" style="width:50%">
+		</div>
+	<!-- theme2 -->
+
+
+	<!-- theme3 -->
+		<div class="container3" style="background:rgba(0, 0, 0, 0.1); ; align-items: center;">
+			<h2 class="zagzag" style="text-align: center; padding: 0;">Решение</h2>
+			<!-- <img src="img/code.png" alt="" class="i" style="width: 50%;"> -->
+			<div class="" style="display: flex;">
+				<code style="margin: auto;">
+									int main(int argc, string argv[])<br>
+					{<br>
+					    if (argc != 2)<br>
+					    {<br>
+					        printf("Usage: ./ceasar k");<br>
+					        return 1;<br>
+					    }<br>
+					    for (int key = 0; key < strlen(argv[1]); key++)<br>
+					    {<br>
+					        if (isalpha(argv[1][key]))<br>
+					        {<br>
+					            printf("Usage: ./caesar key\n");<br>
+					            return 1;<br>
+					        }<br>
+					    }<br>
+					    int key = atoi(argv[1]) % 26;<br>
+					    string plaintext = get_string("plaintext: ");<br>
+					    printf("ciphertext: ");<br>
+					    for (int i = 0, length = strlen(plaintext); i < length; i++)<br>
+					    {<br>
+					        if (!isalpha(plaintext[i]))<br>
+					        {<br>
+					            printf("%c", plaintext[i]);<br>
+					            continue;<br>
+					        }<br>
+					        int offset = isupper(plaintext[i]) ? 65 : 97;<br>
+					        int pi = plaintext[i] - offset;<br>
+					        int ci = (pi + key) % 26;<br>
+					        printf("%c", ci + offset);<br>
+					    }<br>
+					    printf("\n");<br>
+					    return 0;<br>
+					}
+
+				</code>
+			</div>
+		</div>
+	<!-- theme3 -->
+
+	<!-- theme4 -->
+		<div class="container2">
+			<h2 class="zag">Расшифровка</h2>
+			<p class="text">Но как расшифровать текст с помощью кода. Мы уже знаем что при шифре 1 текмт сместится на один символ вперед. Нам просто нужно использовать наш ключ со знаком минус. Если же мы не знаем ключ, то мы должны подбирать ключ в ручную начиная с -1.</p>
+		</div>
+		<div class="container" style="background:transparent;">
+			<p class="text" style="padding-top: 100px;">garvard 2025</p>
+		</div>
+		
+	<!-- theme4 -->
+  </body>
+ </html>
