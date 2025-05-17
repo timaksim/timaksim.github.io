@@ -35,7 +35,7 @@
 				<br><br>
 			Чтобы было понятнее, вот как происходит шифрование HELLO с помощью ключа 1 
 			итог IFMMP:</p>
-			<img src="img/table.png" alt="" class="i" style="width:40%">	
+			<img src="img/table.png" alt="" class="i" style="width:90%">	
 	  </div>
 	<!-- theme1 -->
 
@@ -75,45 +75,47 @@
 
 
 	<!-- theme3 -->
-		<div class="container3" style="background:rgba(0, 0, 0, 0.1); display: flex; align-items: center;">
+		<div class="container3" style="background:rgba(0, 0, 0, 0.1); ; align-items: center;">
 			<h2 class="zagzag" style="text-align: center; padding: 0;">Решение</h2>
 			<!-- <img src="img/code.png" alt="" class="i" style="width: 50%;"> -->
-			<code style="margin: auto;">
-				int main(int argc, string argv[])<br>
-{<br>
-    if (argc != 2)<br>
-    {<br>
-        printf("Usage: ./ceasar k");<br>
-        return 1;<br>
-    }<br>
-    for (int key = 0; key < strlen(argv[1]); key++)<br>
-    {<br>
-        if (isalpha(argv[1][key]))<br>
-        {<br>
-            printf("Usage: ./caesar key\n");<br>
-            return 1;<br>
-        }<br>
-    }<br>
-    int key = atoi(argv[1]) % 26;<br>
-    string plaintext = get_string("plaintext: ");<br>
-    printf("ciphertext: ");<br>
-    for (int i = 0, length = strlen(plaintext); i < length; i++)<br>
-    {<br>
-        if (!isalpha(plaintext[i]))<br>
-        {<br>
-            printf("%c", plaintext[i]);<br>
-            continue;<br>
-        }<br>
-        int offset = isupper(plaintext[i]) ? 65 : 97;<br>
-        int pi = plaintext[i] - offset;<br>
-        int ci = (pi + key) % 26;<br>
-        printf("%c", ci + offset);<br>
-    }<br>
-    printf("\n");<br>
-    return 0;<br>
-}
+			<div class="" style="display: flex;">
+				<code style="margin: auto;">
+									int main(int argc, string argv[])<br>
+					{<br>
+					    if (argc != 2)<br>
+					    {<br>
+					        printf("Usage: ./ceasar k");<br>
+					        return 1;<br>
+					    }<br>
+					    for (int key = 0; key < strlen(argv[1]); key++)<br>
+					    {<br>
+					        if (isalpha(argv[1][key]))<br>
+					        {<br>
+					            printf("Usage: ./caesar key\n");<br>
+					            return 1;<br>
+					        }<br>
+					    }<br>
+					    int key = atoi(argv[1]) % 26;<br>
+					    string plaintext = get_string("plaintext: ");<br>
+					    printf("ciphertext: ");<br>
+					    for (int i = 0, length = strlen(plaintext); i < length; i++)<br>
+					    {<br>
+					        if (!isalpha(plaintext[i]))<br>
+					        {<br>
+					            printf("%c", plaintext[i]);<br>
+					            continue;<br>
+					        }<br>
+					        int offset = isupper(plaintext[i]) ? 65 : 97;<br>
+					        int pi = plaintext[i] - offset;<br>
+					        int ci = (pi + key) % 26;<br>
+					        printf("%c", ci + offset);<br>
+					    }<br>
+					    printf("\n");<br>
+					    return 0;<br>
+					}
 
-			</code>
+				</code>
+			</div>
 		</div>
 	<!-- theme3 -->
 
